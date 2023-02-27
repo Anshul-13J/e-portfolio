@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+This is a free-template modified by me.
 
 Template Name: MyResume
 Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
