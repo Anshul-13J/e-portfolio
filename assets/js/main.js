@@ -266,4 +266,46 @@
    */
   new PureCounter();
 
+  // ===== Dynamic Age Calculation =====
+  window.addEventListener('DOMContentLoaded', function() {
+    var birthDate = new Date(2001, 0, 13); // Months are 0-indexed: 0 = January
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    var ageSpan = document.getElementById('dynamic-age');
+    if (ageSpan) {
+      ageSpan.textContent = age + ' years';
+    }
+  });
+
+  // ===== Dynamic VWITS Experience Calculation =====
+  window.addEventListener('DOMContentLoaded', function() {
+    var start = new Date(2024, 6, 1); // July 2024 (month is 0-indexed)
+    var now = new Date();
+    var years = now.getFullYear() - start.getFullYear();
+    var months = now.getMonth() - start.getMonth();
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    if (now < start) {
+      years = 0;
+      months = 0;
+    }
+    var expText = '';
+    if (years > 0) expText += years + (years === 1 ? ' year' : ' years');
+    if (months > 0) {
+      if (expText) expText += ' ';
+      expText += months + (months === 1 ? ' month' : ' months');
+    }
+    if (!expText) expText = '0 months';
+    var expSpan = document.getElementById('vwits-exp');
+    if (expSpan) {
+      expSpan.textContent = expText;
+    }
+  });
+
 })()
