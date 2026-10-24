@@ -20,4 +20,9 @@ export const achievements: Achievement[] = [
     organization: "Pune and Gurugram",
     detail: "Selected to present AI agents to senior leadership.",
   },
+  {
+    title: "5+ National Hackathon Wins",
+    organization: "MLHacks, Hack This Fall, Volkswagen and more",
+    detail: "Won 5+ National Hackathons.",
+  },
 ];

@@ -1,6 +1,6 @@
 export interface Project {
   slug: string;
-  category: "genai" | "data" | "personal" | "iot";
+  category: "genai" | "data" | "personal" | "iot" | "vr";
   type: string;
   name: string;
   summary: string;
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     slug: "audi-ai-factory",
     category: "genai",
-    type: "Enterprise AI",
+    type: "Enterprise RAG and agentic workflows",
     name: "AUDI AI-Factory",
     summary:
       "Co-engineered an enterprise GenAI platform with AUDI IT and Microsoft. Its agentic workflows and production RAG serve more than 100,000 active users.",
@@ -29,8 +29,8 @@ export const projects: Project[] = [
   },
   {
     slug: "matter-ai",
-    category: "data",
-    type: "Document intelligence",
+    category: "genai",
+    type: "Knowledge graph and document processing",
     name: "MATTER-AI",
     summary:
       "Built GraphRAG document-processing services that extract structured information from more than 50,000 PDFs and connect it as a knowledge graph.",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   },
   {
     slug: "synk",
-    category: "personal",
+    category: "vr",
     type: "Hackathon project",
     name: "SYNK",
     summary:
@@ -75,4 +75,20 @@ export const projects: Project[] = [
     href: "https://github.com/Anshul-13J/Agriculture-Monitoring-Using-AI-and-IoT",
     linkText: "View the project on GitHub",
   },
+  {
+    slug: "cashear-soundbox",
+    category: "iot",
+    type: "IoT",
+    name: "Cashear Soundbox",
+    summary:
+      "Built a barcode-based billing solution for kirana stores, combining a compact IoT soundbox with a web-based billing and inventory management system to eliminate the need for traditional computer-based POS systems.",
+    impact: [
+      "Developed a barcode-based billing workflow with automated bill generation",
+      "Integrated a soundbox to announce bill totals and improve the checkout experience",
+      "Built a Flutter Web interface for billing and inventory management"
+    ],
+    stack: ["IoT", "PCB Design", "Flutter Web", "Python", "Firebase"],
+    href: "https://drive.google.com/drive/folders/1jolMHGNb3LA9M-sG5lVhgKhe2vjOF4Ca?usp=sharing",
+    linkText: "View the Demo",
+  }
 ];
